@@ -38,7 +38,7 @@ from Model import Generator, Discriminator
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
-if device == 'cuda:0':
+if str(device) == 'cuda:0':
     print('Using GPU : ')
     print(torch.cuda.get_device_name(device))
 else :
