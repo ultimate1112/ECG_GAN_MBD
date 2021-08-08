@@ -11,10 +11,9 @@ Copy of GAN with Generator: LSTM, Discriminator: Convolutional NN with ECG Data
     images generated using a single layer of CNN in the discriminator and 2 CNN layers 
     to see if this improves the quality of series generated.
 
-"""
-"""
 Bringing in required dependencies as defined in the GitHub repo: 
-    https://github.com/josipd/torch-two-sample/blob/master/torch_two_sample/permutation_test.pyx"""
+    https://github.com/josipd/torch-two-sample/blob/master/torch_two_sample/permutation_test.pyx
+"""
 from __future__ import division
 
 import torch
