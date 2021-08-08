@@ -26,9 +26,7 @@ from torchvision import transforms
 from torch.autograd.variable import Variable
 sns.set(rc={'figure.figsize':(11, 4)})
 
-import datetime 
-from datetime import date
-today = date.today()
+from datetime import datetime, date
 
 import random
 import json as js
@@ -320,7 +318,7 @@ p2_s = 2
 
 minibatch_out = [0,3,5,8,10]
 for minibatch_layer in minibatch_out:
-  path = ".../your_path/Run_"+str(today.strftime("%d_%m_%Y"))+"_"+ str(datetime.datetime.now().time()).split('.')[0]
+  path = "./output/Run_"+str(datetime.now().strftime('%Y.%m.%d_%H.%M.%S'))
   os.mkdir(path)
   
   dict = {'data' : source_filename, 
