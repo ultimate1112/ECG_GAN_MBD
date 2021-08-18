@@ -470,7 +470,7 @@ for minibatch_layer in minibatch_out:
       fig.suptitle("Generated fake data")
     for j in range(0,3):
       ax[j].plot(series_list[i][:])
-      ax[j].set_title('Epoch '+str(i)+ ', MMD: %.4f' % (mmd_list[i]))
+      ax[j].set_title('Epoch '+str(i)+ ', MMD: %.4f' % (mmd_list[i] if (i < len(mmd_list)) else 0))
       i = i+1
      
     plt.savefig(path+'/Training_Epoch_Samples_MMD_'+str(i)+'.png')
